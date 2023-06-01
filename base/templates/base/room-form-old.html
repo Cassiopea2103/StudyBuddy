@@ -1,0 +1,9 @@
+<form method = 'POST' action="">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type = 'submit' value = 'create_edit_room' > Submit </button> 
+
+</form>

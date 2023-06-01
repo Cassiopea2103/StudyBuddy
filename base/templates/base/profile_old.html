@@ -1,0 +1,34 @@
+<style>
+    .profile-wrapper {
+        display: grid ; 
+        grid-template-columns : 1fr 2fr 1fr 
+    }
+</style>
+
+{% extends 'main.html' %} 
+
+{% block body %}  
+
+    <h1>
+        {{ user.username }}
+    </h1>
+
+    <div class = 'profile-wrapper'>
+
+        <div>
+            {% include 'base/topics_component.html' %}
+        </div>
+
+
+        <div>
+            <h1>Feed</h1>
+            {% include 'base/feed_component.html' %}
+        </div>
+
+
+        <div>
+            {% include 'base/activity_component.html' %}
+        </div>
+    </div>
+
+{% endblock body %} 
